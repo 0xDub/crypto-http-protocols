@@ -1,6 +1,6 @@
 # Crypto Exchange HTTP Protocol Scanner
 
-Motivation: I wanted to see which exchanges supported QUIC
+Rust project for determining HTTP protocol support across these exchanges listed below. Most endpoints were order_book related since that's likely to be optimized and the exchange infra is inherently black-boxed. Private endpoints weren't checked, however, based on the results it looks like exchanges tend to keep the same protocol supports respective to the hostname. Hope y'all enjoy :)
 
 ## Setup
 - `rustup default stable`
@@ -9,9 +9,9 @@ Motivation: I wanted to see which exchanges supported QUIC
 - `BOOM, results`
 
 ### Protocols monitored:
-- h1 (HTTP/1.1)
-- h2 (HTTP/2)
-- h3 (HTTP/3 - QUIC)
+- `h1` (HTTP/1.1)
+- `h2` (HTTP/2)
+- `h3` (HTTP/3 - QUIC)
 
 ### Exchanges monitored:
 - Coinbase
