@@ -43,7 +43,7 @@ fn main() {
         experiments.insert(Exchange::GateIO, Arc::new(Mutex::new(endpoints)));
 
         let mut endpoints = Vec::new();
-        endpoints.push(Endpoint::new(MT::OPTIONS, "https://www.deribit.com/api/v2/public/get_order_book?depth=5&instrument_name=BTC-PERPETUAL"));
+        endpoints.push(Endpoint::new(MT::INCLUSIVE, "https://www.deribit.com/api/v2/public/get_order_book?depth=5&instrument_name=BTC-PERPETUAL"));
         experiments.insert(Exchange::Deribit, Arc::new(Mutex::new(endpoints)));
 
         let mut endpoints = Vec::new();
